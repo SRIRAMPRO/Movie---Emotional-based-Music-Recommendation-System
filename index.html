@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+* {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #09111d;
+    overflow: hidden;
+    margin: 0;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+header {
+    background-color: transparent;
+    color: #14bea4;
+    height: 80px;
+    width: 100%;
+    left: 0;
+    padding-top: 6px;
+    padding-left: 20px;
+    z-index: 1;
+    position: fixed;
+    font-weight: 600;
+    font-size: 50px;
+    text-align: center;
+}
+
+/* Add styles for the video element */
+video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+    opacity: 0.5; /* You can adjust the opacity as needed */
+}
+
+img {
+    margin-top: 27%;
+    margin-left: 220px;
+    width: 25%;
+    height: 40%;
+    position: relative;
+    z-index: 2;
+    border-radius: 10px;
+    border: 2px solid darkgray;
+    transition: all 0.3s ease;
+}
+
+.cont {
+    position: absolute;
+    top: 0;
+}
+img:hover {
+    transform: scale(0.96);
+}
+
+h1 {
+    color: darkgray;
+    position: absolute;
+    top: 15%;
+    left: 27%;
+}
+
+.mov {
+    color: darkgray;
+    position: absolute;
+    top: 37%;
+    left: 26%;
+    font-size: 50px;
+    font-weight: 600;
+    font-family: sans-serif;
+}
+
+.mus {
+    color: darkgray;
+    position: absolute;
+    top: 38%;
+    left: 75%;
+    font-size: 50px;
+    font-weight: 600;
+    font-family: sans-serif;
+}
+
+.music {
+    margin-left: 4%;
+}
+.movie{
+  margin-left: 3%;
+}
+.blink-heading {
+    font-size: 50px; /* Adjust the font size as needed */
+    animation: blink 3s infinite alternate;
+}
+video {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+
+/* Define the blink animation */
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+</style>
+
+<body>
+   <center><h1 class="blink-heading">Get Your Movies and Music._.🎶</h1></center>
+    <div class="container">
+        <div class="cont">
+            <header>NEXUS</header>
+           
+        <div class="container">
+        <span class="mov">Movies</span>
+        <span class="movie"><a href="http://localhost:8501"><img src="https://altabel.files.wordpress.com/2016/11/1.jpg" alt="Movies"></a></span>
+        <span class="mus">Music</span>
+        <span class="music"><a href=" http://localhost:8502"><img src="https://img.freepik.com/premium-photo/concept-eternal-theme-about-eternity-music-musical-instruments-good-mood-ascended-aspiration-action-treble-clef-sheet-music_771426-4115.jpg" alt="Music"></a></span>
+        </div>
+
+        <video autoplay muted loop id="myVideo">
+            <source src="./v3.mp4" type="video/mp4">
+          </video>
+        
+    </div>
+   
+    </div>
+</body>
+
+</html>
